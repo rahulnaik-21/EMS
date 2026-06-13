@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Edit Employee</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+<!-- <input
+type="text"
+name="name"
+value="{{ employee.name }}">
+
+<br><br>
+
+<input
+type="number"
+name="salary"
+value="{{ employee.salary }}">
+
+<br><br>
+
+<input
+type="text"
+name="designation"
+value="{{ employee.designation }}">
+
+<br><br>
+
+<select name="department">
+
+{% for dept in departments %}
+
+<option
+value="{{ dept.id }}"
+
+{% if dept.id == employee.department.id %}
+selected
+{% endif %}
+
+>
+
+{{ dept.name }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+<br><br> -->
+
+<button type="submit" class="btn btn-primary">
+
+Update Employee
+
+</button>
+
+</form>
+
+{% endblock %}

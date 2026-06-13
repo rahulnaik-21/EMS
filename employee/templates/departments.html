@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="mb-3">
+Departments
+</h2>
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+{% if user.is_staff %}
+<th>Edit</th>
+
+<th>Delete</th>
+{% endif %}
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for dept in departments %}
+
+<tr>
+
+<td>{{ dept.id }}</td>
+
+<td>{{ dept.name }}</td>
+{% if user.is_staff %}
+<td>
+
+<a
+class="btn btn-warning btn-sm"
+href="/edit-department/{{ dept.id }}/">
+
+Edit
+
+</a>
+
+</td>
+
+<td>
+
+<a
+class="btn btn-danger btn-sm"
+href="/delete-department/{{ dept.id }}/">
+
+Delete
+
+</a>
+
+</td>
+
+{% endif %}
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% endblock %}

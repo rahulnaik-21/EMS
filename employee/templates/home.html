@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h2>
+Employee Management System
+</h2>
+
+{% for message in messages %}
+    <p>{{ message }}</p>
+{% endfor %}
+<p>
+Manage employees and departments easily.
+</p>
+
+</div>
+
+</div>
+
+{% endblock %}
