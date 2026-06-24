@@ -69,7 +69,7 @@ def edit_employee(request, id):
     return render(request,'edit_employee.html',{'form':form})
 # here we are not sent department because internally django has took employee model so there is foreign nothing involved in departments.
 
-
+#this login will help by decorting symbols 
 @login_required
 @user_passes_test(is_admin)
 def delete_employee(request, id):
