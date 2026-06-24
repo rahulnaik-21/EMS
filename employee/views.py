@@ -67,7 +67,7 @@ def edit_employee(request, id):
         form=EmployeeForm(instance=emp)
     
     return render(request,'edit_employee.html',{'form':form})
-# here we are not sent department because internally django has took employee model so there is foreign involed in department .
+# here we are not sent department because internally django has took employee model so there is foreign nothing involved in departments.
 
 
 @login_required
